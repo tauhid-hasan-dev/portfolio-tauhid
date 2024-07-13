@@ -14,7 +14,8 @@ const Home = () => {
             <span className="text-xl text-white/50">Hello I'm</span>
             <h1 className="h2 mb-6 text-white/50">
               <span className="text-white/80">Tauhid Hasan</span>
-              <br /> <p className="text-xl mt-1 ">And I'm a</p>{" "}
+              <span className="text-xl text-white/50">, a</span>
+              <br />
               <span className="text-accent">Software Developer</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
