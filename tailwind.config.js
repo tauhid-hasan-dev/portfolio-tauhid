@@ -23,12 +23,12 @@ module.exports = {
       primary: "var(--font-jetbrainsMono)",
     },
     extend: {
-      colors:  {
-        primary: "#1c1c22",
-        accent:  {
-          DEFAULT: "#00ff99",
-          hover: "00e187"
-        }
+      colors: {
+        primary: "#0F172A",
+        accent: {
+          DEFAULT: "#C3FF93",
+          hover: "00e187",
+        },
       },
       keyframes: {
         "accordion-down": {

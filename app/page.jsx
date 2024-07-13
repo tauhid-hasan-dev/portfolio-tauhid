@@ -10,9 +10,10 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none mt-5">
-            <span className="text-xl ">Software Developer</span>
-            <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent">Tauhid Hasan</span>
+            <span className="text-xl ">Hello I'm</span>
+            <h1 className="h2 mb-6 text-white/80">
+              Tauhid Hasan
+              <br /> <span className="text-accent">Software Developer</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               I am a full stack developer. I am proficient in various
