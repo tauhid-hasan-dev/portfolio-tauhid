@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import Social from "../components/Social";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
               I am a full stack developer. I am proficient in various
               programming language
             </p>
-            <div className="flex flex-col xl:flex-row">
+            <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
                 variant="outline"
                 size="lg"
@@ -25,9 +26,11 @@ const Home = () => {
                 <span>Download CV</span>
                 <FiDownload className="text-xl"></FiDownload>
               </Button>
-              <div className="mb-8 xl:mb-8">
-                socials
-                {/* <Social /> */}
+              <div className="mb-8 xl:mb-0">
+                <Social
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                />
               </div>
             </div>
           </div>
