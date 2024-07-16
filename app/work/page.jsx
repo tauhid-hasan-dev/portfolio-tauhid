@@ -14,11 +14,12 @@ import {
 
 import link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Frontend",
     title: "project 1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
@@ -29,7 +30,7 @@ const projects = [
   },
   {
     num: "02",
-    category: "FullStack",
+    category: "Full Stack",
     title: "project 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
@@ -40,7 +41,7 @@ const projects = [
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Frontend",
     title: "project 3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
@@ -66,9 +67,35 @@ const Work = () => {
             <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
               <div>{project.num}</div>
             </div>
-            <h2 className="text-[42px] font-bold leading-none">
-              {project.category}
+            <h2 className="text-[32px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              {project.category} Project
             </h2>
+            <p className="text-white/50">{project.description}</p>
+            <ul className="flex gap-4">
+              {project.stack.map((item, index) => {
+                return (
+                  <li key={index} className="text-xl text-accent">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="border border-white/20"></div>
+            <div>
+              <Link href={project.live}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <BsArrowUpRight></BsArrowUpRight>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Live Project</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+            </div>
           </div>
           <div className="w-full xl:w-[50%] ">slider</div>
         </div>
