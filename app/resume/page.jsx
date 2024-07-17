@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -54,28 +54,6 @@ const experience = {
   title: "My Experience",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dolor.",
-  items: [
-    {
-      company: "Altor Danismanlik",
-      position: "Full Stack Developer",
-      duration: "December 2023 - Present",
-    },
-    {
-      company: "Avocado10 Technology",
-      position: "Frontend Developer",
-      duration: "January 2023 - October 2023",
-    },
-    {
-      company: "Workcube",
-      position: "Frontend Developer",
-      duration: "January 2023 - April 2023",
-    },
-    {
-      company: "Gramoni",
-      position: "Frontend Developer",
-      duration: "August 2021 - December 2021",
-    },
-  ],
 };
 
 // education
@@ -147,6 +125,16 @@ const skills = {
 };
 
 const Resume = () => {
+  const [experiences, setExperiences] = useState([]);
+
+  console.log(experiences);
+
+  useEffect(() => {
+    fetch("https://portfolio-backend-one-ivory.vercel.app/api/experiences ")
+      .then((response) => response.json())
+      .then((data) => setExperiences(data));
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -177,7 +165,7 @@ const Resume = () => {
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {  
+                    {experiences?.data?.map((item, index) => {
                       return (
                         <li
                           key={index}
