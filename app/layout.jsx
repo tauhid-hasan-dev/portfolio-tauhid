@@ -2,7 +2,6 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "../components/PageTransition";
-import StairEffect from "../components/StairEffect";
 
 const jetbrainsmono = JetBrains_Mono({
   subsets: ["latin"],
