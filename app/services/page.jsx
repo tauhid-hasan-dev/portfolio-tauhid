@@ -53,7 +53,7 @@ const Services = () => {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent">
                 {service.title}
               </h2>
-              <p className="text-white/50">{service.description}</p>
+              {/* <p className="text-white/50">{service.description}</p> */}
               <div className="border-b border-white/20 w-full mt-4"></div>
             </div>
           ))}

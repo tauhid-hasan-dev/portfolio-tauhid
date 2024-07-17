@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -49,12 +47,10 @@ const about = {
 };
 
 // Experience data
-
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dolor.",
+  description: "2 years of experience",
 };
 
 // education
@@ -122,9 +118,9 @@ const Resume = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
+            {/* <TabsTrigger value="education">Education</TabsTrigger> */}
             <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            {/* <TabsTrigger value="about">About me</TabsTrigger> */}
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
