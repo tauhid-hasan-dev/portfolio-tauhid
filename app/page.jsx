@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import Social from "../components/Social";
@@ -19,18 +18,23 @@ const Home = () => {
               <span className="text-accent">Software Developer</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I am a full stack developer. Let me how can I contribute to your
-              business
+              I am a full stack developer. Let me know how I can contribute to
+              your business
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <a
+                href="/assets/Resume_Tauhid.pdf"
+                download="Tauhid_Hasan_Resume.pdf"
               >
-                <span>Download CV</span>
-                <FiDownload className="text-xl"></FiDownload>
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download Resume</span>
+                  <FiDownload className="text-xl"></FiDownload>
+                </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
