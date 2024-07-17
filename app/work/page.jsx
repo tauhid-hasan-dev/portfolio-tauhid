@@ -17,14 +17,75 @@ import WorkSliderBtn from "../../components/WorkSliderBtns";
 import Image from "next/image";
 import Link from "next/link";
 
+/* {
+  num: "01",
+  category: "Full Stack",
+  title: "Pet Love",
+  description: "A pet adoption platform",
+  stack: [
+    { name: "NextJs" },
+    { name: "TypeScript" },
+    { name: "NodeJs" },
+    { name: "Express" },
+    { name: "Prisma" },
+    { name: "PostgreSQL" },
+  ],
+  image: "https://i.ibb.co/Z241dJ6/pet-love.png",
+  live: "https://pet-love-eight.vercel.app/",
+  githubServer: "https://github.com/tauhid-hasan-dev/pet-love-backend",
+  githubClient: "https://github.com/tauhid-hasan-dev/pet-love-client",
+}, */
+
+/* {
+  num: "02",
+  category: "Full Stack",
+  title: "Rare Books",
+  description: "A rare and old book store - buy & sell",
+  stack: [
+    { name: "ReactJs" },
+    { name: "Javascript" },
+    { name: "NodeJs" },
+    { name: "Express" },
+    { name: "MongoDB" },
+  ],
+  image: "https://i.ibb.co/S7pLv9h/rarebooks.png",
+  live: "https://used-book-store-90b6b.web.app/",
+  githubServer: "https://github.com/tauhid-hasan-dev/used-books-server",
+  githubClient: "https://github.com/tauhid-hasan-dev/used-books-client",
+}, */
+
+/* {
+  num: "03",
+  category: "Full Stack",
+  title: "Zaha Hadid Architect",
+  description: "Professional Service based web app",
+  stack: [
+    { name: "ReactJs" },
+    { name: "Javascript" },
+    { name: "NodeJs" },
+    { name: "Express" },
+    { name: "MongoDb" },
+  ],
+  image: "https://i.ibb.co/rcsm7nf/zaha-hadid.png",
+  live: "https://architect-tauhid-hasan.web.app/",
+  githubServer: "https://github.com/tauhid-hasan-dev/architect-zaha-hadid-server",
+  githubClient: "https://github.com/tauhid-hasan-dev/architect-zaha-hadid-client",
+}, */
+
 const projects = [
   {
     num: "01",
-    category: "Frontend",
-    title: "project 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    category: "Full Stack",
+    title: "Pet Love",
+    description: "A pet adoption platform",
+    stack: [
+      { name: "NextJs" },
+      { name: "TypeScript" },
+      { name: "NodeJs" },
+      { name: "Express" },
+      { name: "Prisma" },
+      { name: "PostgreSQL" },
+    ],
     image: "/assets/work/thumb1.png",
     live: "",
     github: "",

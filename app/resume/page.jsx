@@ -177,7 +177,7 @@ const Resume = () => {
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
+                    {experience.items.map((item, index) => {  
                       return (
                         <li
                           key={index}
