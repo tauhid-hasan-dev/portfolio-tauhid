@@ -17,9 +17,10 @@ const Home = () => {
               <br />
               <span className="text-accent">Software Developer</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I am a full stack developer. Let me know how I can contribute to
-              your business
+            <p className="max-w-[550px] mb-9 text-white/80">
+              Experienced full-stack developer with a solid foundation in
+              frontend development and backend expertise, I bring a
+              comprehensive solution for your business.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
