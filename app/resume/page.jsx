@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -86,53 +87,23 @@ const education = {
   ],
 };
 
-// Skills data
-
-const skills = {
-  title: "My Skills",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dolor.",
-  skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "Html5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "CSS3",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "NodeJs",
-    },
-    {
-      icon: <FaJs />,
-      name: "Javascript",
-    },
-    {
-      icon: <FaReact />,
-      name: "ReactJs",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwind CSS",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "NextJs",
-    },
-  ],
-};
-
 const Resume = () => {
   const [experiences, setExperiences] = useState([]);
+  const [skillData, setSkillData] = useState([]);
 
   console.log(experiences);
+  console.log(skillData);
 
   useEffect(() => {
     fetch("https://portfolio-backend-one-ivory.vercel.app/api/experiences ")
       .then((response) => response.json())
       .then((data) => setExperiences(data));
+  }, []);
+
+  useEffect(() => {
+    fetch("https://portfolio-backend-one-ivory.vercel.app/api/skills ")
+      .then((response) => response.json())
+      .then((data) => setSkillData(data));
   }, []);
 
   return (
@@ -217,22 +188,26 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value="skills" className="w-full">
               <div>
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                {/* <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
-                </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] ">
-                  {skills.skillList.map((skill, index) => {
+                </div> */}
+                <ul className="grid grid-cols-3 gap-[30px] sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] ">
+                  {skillData?.data?.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300 ">
-                                {skill.icon}
-                              </div>
+                            <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <Image
+                                src={skill.icon}
+                                alt={skill.name}
+                                width={70} // Adjust the width and height as needed
+                                height={70}
+                                className="group-hover:text-accent transition-all duration-300"
+                              />
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>
